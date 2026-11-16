@@ -57,7 +57,9 @@ module Cache
 
       transaction.commit
       true
-    rescue
+    rescue error : LMDB::Error
+      raise error unless error.code.not_found?
+
       transaction.try &.commit
       false
     end
