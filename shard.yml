@@ -1,0 +1,20 @@
+name: lmdb_cache
+version: 0.1.0
+
+authors:
+  - wuestenfee <wuestenfee@wuestenfee.mozmail.com>
+
+dependencies:
+  cache:
+    github: crystal-cache/cache
+  lmdb:
+    github: RomainFranceschini/crystal-lmdb
+
+development_dependencies:
+  timecop:
+    github: crystal-community/timecop.cr
+    branch: master
+
+crystal: '>= 1.22.2'
+
+license: AGPL
